@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10111a" />
+    <title>BenPet</title>
+  </head>
+  <body>
+    <main id="pet-root" aria-label="BenPet desktop character">
+      <div id="pet-stage">
+        <img id="pet-image" src="/assets/character/idle.gif" alt="BenPet character" draggable="false" />
+        <div id="fallback-character" aria-hidden="true">
+          <div class="fallback-face"><span>•</span><span>•</span><b>ᴗ</b></div>
+          <div class="fallback-body"></div>
+        </div>
+        <div id="speech-bubble" class="hidden" role="status"></div>
+      </div>
+      <div id="context-menu" class="hidden" role="menu">
+        <div class="menu-heading">BENPET <span>v0.1</span></div>
+        <button data-action="mode" data-value="free" role="menuitem">ลอยอิสระ</button>
+        <button data-action="mode" data-value="edge" role="menuitem">เกาะขอบจอ</button>
+        <button data-action="mode" data-value="walk" role="menuitem">เดินไปมา</button>
+        <div class="menu-separator"></div>
+        <div class="menu-label">ขนาดตัวละคร</div>
+        <div class="size-row">
+          <button data-action="size" data-value="-10" aria-label="ลดขนาด">−</button>
+          <span id="size-value">100%</span>
+          <button data-action="size" data-value="10" aria-label="เพิ่มขนาด">+</button>
+        </div>
+        <div class="menu-separator"></div>
+        <button data-action="top" role="menuitem">สลับ Always on Top</button>
+        <button data-action="say" role="menuitem">ทักทาย</button>
+        <button data-action="reset" role="menuitem">รีเซ็ตตำแหน่ง</button>
+        <button data-action="quit" class="quit" role="menuitem">ปิด BenPet</button>
+      </div>
+      <div id="toast" class="hidden"></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

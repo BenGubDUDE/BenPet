@@ -1,0 +1,18 @@
+[package]
+name = "benpet"
+version = "0.1.0"
+description = "BenPet desktop companion"
+authors = ["BenPet"]
+edition = "2021"
+
+[lib]
+name = "benpet_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
